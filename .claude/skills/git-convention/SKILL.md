@@ -28,7 +28,13 @@ Examples: `feat/user-login`, `fix/token-expiry`, `chore/upgrade-node-20`.
 
 ## Commits
 
-Format: `<type>(<scope>): <subject> (<JIRA-KEY>)` — scope optional, Jira ticket required.
+Format — scope optional, Jira ticket required on its own line after a blank line:
+
+```
+<type>(<scope>): <subject>
+
+jira: <JIRA-KEY>
+```
 
 Types: `feat`, `fix`, `refactor`, `perf`, `docs`, `test`, `chore`, `ci`, `exp`.
 
@@ -38,16 +44,24 @@ Rules:
 - One commit = one purpose.
 - Body: **what** and **why**, not how.
 - No `Co-Authored-By`.
-- Every commit includes a Jira ticket number (e.g. `DART-123`).
+- Every commit ends with a Jira ticket line: `jira: DART-123`.
 
 **Branch name ≠ commit message** — never reuse the branch name as the subject.
 
 | Branch | Commit message |
 | --- | --- |
-| `feat/user-login` | `feat: 사용자 로그인 API 추가 (DART-101)` |
-| `fix/token-expiry` | `fix: 토큰 만료 시 무한 루프 수정 (DART-102)` |
-| `chore/upgrade-node-20` | `chore: pnpm 10.x로 업그레이드 (DART-103)` |
-| `exp/vector-search` | `exp: 신규 기능 연구-자연어 수치 표현 번역 모델 개발 (DART-104)` |
+| `feat/user-login` | `feat: 사용자 로그인 API 추가` |
+| `fix/token-expiry` | `fix: 토큰 만료 시 무한 루프 수정` |
+| `chore/upgrade-node-20` | `chore: pnpm 10.x로 업그레이드` |
+| `exp/vector-search` | `exp: 신규 기능 연구-자연어 수치 표현 번역 모델 개발` |
+
+Full example:
+
+```
+feat: 사용자 로그인 API 추가
+
+jira: DART-101
+```
 
 ## PRs
 
