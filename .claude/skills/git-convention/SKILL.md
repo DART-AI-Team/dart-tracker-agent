@@ -71,6 +71,13 @@ jira: DART-101
 | `dev` | `main` | Merge commit |
 | `fix/*` from `main` (hotfix) | `main`, back-port to `dev` | Squash |
 
+Team: `leeaain2027`, `rangedayo`, `Jongha611`.
+
+Review & merge flow:
+1. On PR creation, request review from the two team members other than the author.
+2. Merge only after both approve — the PR author merges.
+3. After merge, delete the working branch (except `exp/*`).
+
 ## Claude behavior
 
 **Jira ticket** — before every commit or push, ask the user for the Jira ticket number and include it in the commit message. Never commit without it.
